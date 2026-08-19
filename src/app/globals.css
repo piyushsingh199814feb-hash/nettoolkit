@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --fg: #0f172a;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --card: #ffffff;
+  --soft: #f8fafc;
+  --brand: #1f47e6;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #c7d8ff;
+  color: #0f172a;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #3066ff;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6;
+  }
+  .container-prose {
+    @apply mx-auto w-full max-w-3xl px-4 sm:px-6;
+  }
+  .card {
+    @apply rounded-xl border border-ink-200 bg-white;
+  }
+  .card-soft {
+    @apply rounded-xl border border-ink-200 bg-ink-50;
+  }
+  .label {
+    @apply block text-sm font-medium text-ink-700;
+  }
+  .help {
+    @apply mt-1 text-xs text-ink-500;
+  }
+  .h-section {
+    @apply text-2xl font-semibold tracking-tight text-ink-900 sm:text-3xl;
+  }
+  .h-tool {
+    @apply text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl;
+  }
+  .prose-body p {
+    @apply mb-4 leading-relaxed text-ink-700;
+  }
+  .prose-body ul {
+    @apply mb-4 list-disc space-y-2 pl-6 text-ink-700;
+  }
+  .prose-body ol {
+    @apply mb-4 list-decimal space-y-2 pl-6 text-ink-700;
+  }
+  .prose-body h2 {
+    @apply mb-3 mt-8 text-2xl font-semibold text-ink-900;
+  }
+  .prose-body h3 {
+    @apply mb-2 mt-6 text-lg font-semibold text-ink-900;
+  }
+  .prose-body a {
+    @apply text-brand-700 underline-offset-2 hover:underline;
+  }
+  .prose-body code {
+    @apply rounded bg-ink-100 px-1.5 py-0.5 font-mono text-sm text-ink-800;
+  }
+}
+
+/* Reduce motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
