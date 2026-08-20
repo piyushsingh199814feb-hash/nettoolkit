@@ -19,24 +19,26 @@ export function FAQ({ items }: { items: FAQItem[] }) {
 }
 
 function FaqEntry({ item }: { item: FAQItem }) {
-  const [open, setOpen] = React.useState(false);
+  // Start OPEN by default so answers are immediately visible.
+  // Users can collapse by clicking the question.
+  const [open, setOpen] = React.useState(true);
   return (
     <div>
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+        className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left hover:bg-ink-50"
       >
         <h3 className="text-base font-medium text-ink-900">{item.question}</h3>
         <span
           className={[
             "grid h-7 w-7 shrink-0 place-items-center rounded-full border border-ink-200 text-ink-600 transition-transform",
-            open ? "rotate-45" : "",
+            open ? "" : "rotate-180",
           ].join(" ")}
           aria-hidden
         >
-          <Icon name="close" size={14} />
+          <Icon name="arrow-right" size={14} />
         </span>
       </button>
       {open && (

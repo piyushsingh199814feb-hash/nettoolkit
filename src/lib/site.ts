@@ -1,6 +1,6 @@
 import type { ToolMeta } from "./types";
 
-export const SITE_URL = "https://nettoolkit.app";
+export const SITE_URL = "https://nettoolkit.xyz";
 export const SITE_NAME = "NetToolKit";
 export const SITE_TAGLINE =
   "Simple tools for the internet, files, and everyday digital tasks.";
