@@ -6,18 +6,22 @@ import { SearchTools } from "@/components/SearchTools";
 import { FAQ } from "@/components/FAQ";
 import { TOOLS, TOOLS_BY_CATEGORY } from "@/lib/tools";
 import { CATEGORIES } from "@/lib/categories";
+import { BLOG_POSTS } from "@/lib/blog";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 
 export default function HomePage() {
   const popular = TOOLS.filter((t) => t.popular).slice(0, 12);
   const recent = [...TOOLS].reverse().slice(0, 6);
+  const recentPosts = [...BLOG_POSTS]
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, 3);
 
   return (
     <>
-      {/* Hero — Download and Upload calculators front and center */}
+      {/* Hero */}
       <section className="border-b border-ink-200 bg-gradient-to-b from-white to-ink-50">
-        <div className="container-narrow py-12 sm:py-16">
-          <div className="mx-auto max-w-3xl text-center">
+        <div className="container-narrow py-14 sm:py-20">
+          <div className="mx-auto max-w-2xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-ink-200 bg-white px-3 py-1 text-xs font-medium text-ink-700">
               <Icon name="zap" size={12} className="text-brand-600" />
               Free, fast, privacy-friendly
@@ -28,59 +32,26 @@ export default function HomePage() {
             <p className="mt-3 text-base text-ink-700 sm:text-lg">
               {SITE_TAGLINE}
             </p>
-          </div>
+            <p className="mt-1 text-sm text-ink-600">
+              Fast, free online tools that work directly in your browser.
+            </p>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <Link
-              href="/tools/download-time-calculator"
-              className="group relative flex flex-col rounded-2xl border-2 border-brand-200 bg-white p-6 text-left transition-all hover:border-brand-500 hover:bg-brand-50/40 hover:shadow-lg sm:p-8"
-            >
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white">
-                <Icon name="download" size={24} />
-              </span>
-              <h2 className="mt-4 text-xl font-semibold text-ink-900 group-hover:text-brand-700">
-                Download Time Calculator
-              </h2>
-              <p className="mt-1 text-sm text-ink-600">
-                How long will your download take? Enter the file size and your
-                speed, get an instant estimate.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700">
-                Open calculator
-                <Icon name="arrow-right" size={16} />
-              </span>
-            </Link>
-            <Link
-              href="/tools/upload-time-calculator"
-              className="group relative flex flex-col rounded-2xl border-2 border-brand-200 bg-white p-6 text-left transition-all hover:border-brand-500 hover:bg-brand-50/40 hover:shadow-lg sm:p-8"
-            >
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white">
-                <Icon name="upload" size={24} />
-              </span>
-              <h2 className="mt-4 text-xl font-semibold text-ink-900 group-hover:text-brand-700">
-                Upload Time Calculator
-              </h2>
-              <p className="mt-1 text-sm text-ink-600">
-                Estimate upload time for any file at your connection speed.
-                Symmetric, mobile, fiber — all supported.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700">
-                Open calculator
-                <Icon name="arrow-right" size={16} />
-              </span>
-            </Link>
-          </div>
-
-          <div className="mt-8 flex flex-col items-center gap-3">
-            <div className="w-full max-w-xl">
-              <SearchTools placeholder="Search all 12 tools…" />
+            <div className="mx-auto mt-6 max-w-xl">
+              <SearchTools placeholder="Search for a tool…" />
             </div>
-            <Link
-              href="/tools"
-              className="text-sm font-medium text-brand-700 hover:underline"
-            >
-              Or browse all tools →
-            </Link>
+
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-xs text-ink-500">
+              <span>Popular:</span>
+              {popular.slice(0, 4).map((t) => (
+                <Link
+                  key={t.id}
+                  href={`/tools/${t.slug}`}
+                  className="rounded-full border border-ink-200 bg-white px-2.5 py-1 font-medium text-ink-700 hover:border-brand-300 hover:text-brand-700"
+                >
+                  {t.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -166,6 +137,50 @@ export default function HomePage() {
         </p>
         <div className="mt-6">
           <FAQ items={HOME_FAQ} />
+        </div>
+      </section>
+
+      {/* Latest from the blog */}
+      <section className="container-narrow py-12">
+        <div className="mb-6 flex items-end justify-between">
+          <div>
+            <h2 className="h-section">From the blog</h2>
+            <p className="mt-1 text-sm text-ink-600">
+              Practical guides and clear explanations.
+            </p>
+          </div>
+          <Link
+            href="/blog"
+            className="text-sm font-medium text-brand-700 hover:underline"
+          >
+            Read all →
+          </Link>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {recentPosts.map((p) => (
+            <Link
+              key={p.id}
+              href={`/blog/${p.slug}`}
+              className="group flex h-full flex-col rounded-xl border border-ink-200 bg-white p-5 transition-colors hover:border-brand-300 hover:bg-brand-50/40"
+            >
+              <span className="text-xs font-medium text-brand-700">
+                {p.category} · {p.readTime} min read
+              </span>
+              <h3 className="mt-2 text-base font-semibold text-ink-900 group-hover:text-brand-700">
+                {p.title}
+              </h3>
+              <p className="mt-2 line-clamp-3 text-sm text-ink-600">
+                {p.description}
+              </p>
+              <span className="mt-auto pt-3 text-xs text-ink-500">
+                {new Date(p.publishedAt).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
 

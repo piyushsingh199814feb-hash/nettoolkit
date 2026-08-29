@@ -30,6 +30,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link className="hover:text-ink-900" href="/blog">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link className="hover:text-ink-900" href="/category/internet">
                   Internet tools
                 </Link>

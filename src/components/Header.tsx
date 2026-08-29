@@ -34,6 +34,7 @@ export function Header() {
             <NavLink href="/category/converters">Converters</NavLink>
             <NavLink href="/category/calculators">Calculators</NavLink>
             <NavLink href="/tools">All tools</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
           </nav>
         </div>
 
@@ -80,6 +81,9 @@ export function Header() {
             </MobileNavLink>
             <MobileNavLink href="/tools" onClick={() => setOpen(false)}>
               All tools
+            </MobileNavLink>
+            <MobileNavLink href="/blog" onClick={() => setOpen(false)}>
+              Blog
             </MobileNavLink>
           </div>
         </div>
