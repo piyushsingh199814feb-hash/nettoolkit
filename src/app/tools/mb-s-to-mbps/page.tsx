@@ -71,6 +71,26 @@ const FAQS = [
       </>
     ),
   },
+  {
+    question: "Why is 100 MB/s not the same as 100 Mbps?",
+    answer: (
+      <>
+        The capital B in MB/s means megabytes, while the lowercase b in Mbps
+        means megabits. There are 8 bits in a byte, so 100 MB/s = 800 Mbps.
+        The two units are 8× different and frequently confused.
+      </>
+    ),
+  },
+  {
+    question: "How many Mbps do I need to stream 4K?",
+    answer: (
+      <>
+        About 25 Mbps for a single 4K stream. So if you see 3.125 MB/s in your
+        downloader, you are streaming 4K. Most home plans (100–300 Mbps)
+        easily support 4K streaming on multiple devices.
+      </>
+    ),
+  },
 ];
 
 export default function Page() {

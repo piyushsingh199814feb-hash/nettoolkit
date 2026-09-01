@@ -74,6 +74,26 @@ const FAQS = [
       </>
     ),
   },
+  {
+    question: "How many MB/s is 1 Gbps?",
+    answer: (
+      <>
+        1 Gbps (1000 Mbps) = 125 MB/s. Gigabit internet can transfer at 125
+        megabytes per second, which is enough to download a 1 GB file in about
+        8 seconds.
+      </>
+    ),
+  },
+  {
+    question: "Is 100 Mbps fast enough for streaming 4K?",
+    answer: (
+      <>
+        Yes. Netflix 4K requires about 25 Mbps, so 100 Mbps comfortably
+        supports 4K streaming on multiple devices simultaneously. 100 Mbps =
+        12.5 MB/s of actual throughput.
+      </>
+    ),
+  },
 ];
 
 export default function Page() {

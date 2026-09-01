@@ -77,6 +77,28 @@ const FAQS = [
       </>
     ),
   },
+  {
+    question: "How long to upload a 1 GB file on a typical home connection?",
+    answer: (
+      <>
+        On a 10 Mbps upload (typical cable) about 13 minutes 39 seconds. On 50
+        Mbps upload (faster cable or entry fiber) about 2 minutes 44 seconds.
+        On gigabit upload (symmetric fiber) about 8 seconds.
+      </>
+    ),
+  },
+  {
+    question: "How can I speed up my uploads?",
+    answer: (
+      <>
+        Use a wired Ethernet connection instead of Wi-Fi. Close other apps
+        using the network. Upload during off-peak hours (late night). Compress
+        large files before uploading (especially videos and images). On
+        residential broadband, upload speed is usually 5–10× slower than
+        download, so plan accordingly.
+      </>
+    ),
+  },
 ];
 
 export default function Page() {

@@ -31,9 +31,9 @@ export const TOOLS: ToolMeta[] = [
       "mbps-to-mb-s",
     ],
     seoTitle:
-      "Download Time Calculator — Estimate File Download Time",
+      "Download Time Calculator — How Long Will It Take? (2026)",
     seoDescription:
-      "Calculate how long it will take to download a file based on its size and your internet speed. Free, accurate and supports MB, GB, Mbps, Gbps.",
+      "Free download time calculator. Enter file size & internet speed, get instant results in seconds, minutes, or hours. Works for any file size. No signup, no ads.",
     featured: true,
     popular: true,
   },
@@ -59,9 +59,9 @@ export const TOOLS: ToolMeta[] = [
       "mb-s-to-mbps",
     ],
     seoTitle:
-      "Upload Time Calculator — Estimate File Upload Time",
+      "Upload Time Calculator — Estimate Upload Time Instantly (2026)",
     seoDescription:
-      "Estimate the time required to upload a file based on its size and your upload speed. Free online upload time calculator with Mbps and MB/s support.",
+      "Free upload time calculator. Calculate how long any file will take to upload based on file size and your upload speed. No signup, no ads, no uploads.",
     featured: true,
     popular: true,
   },
@@ -87,9 +87,9 @@ export const TOOLS: ToolMeta[] = [
       "mbps-to-mb-s",
     ],
     seoTitle:
-      "Bandwidth Calculator — Estimate Required Network Bandwidth",
+      "Bandwidth Calculator — Plan Your Network in 30 Seconds (2026)",
     seoDescription:
-      "Calculate the bandwidth required for your network based on the number of users, data per user and usage time. Free bandwidth planning calculator.",
+      "Free bandwidth calculator. Calculate required bandwidth, monthly data usage, and download times. Works for any speed or file size.",
     popular: true,
   },
   {
@@ -112,9 +112,10 @@ export const TOOLS: ToolMeta[] = [
       "download-time-calculator",
       "upload-time-calculator",
     ],
-    seoTitle: "Mbps to MB/s Converter — Megabits to Megabytes",
+    seoTitle:
+      "Mbps to MB/s Converter — Megabits to Megabytes (2026)",
     seoDescription:
-      "Convert Mbps (megabits per second) to MB/s (megabytes per second) instantly. Includes formula, examples and clear explanation of the units.",
+      "Convert Mbps to MB/s instantly. Free megabits to megabytes converter with formula, examples, and full explanation. No signup.",
     popular: true,
   },
   {
@@ -137,9 +138,9 @@ export const TOOLS: ToolMeta[] = [
       "download-time-calculator",
       "upload-time-calculator",
     ],
-    seoTitle: "MB/s to Mbps Converter — Megabytes to Megabits",
+    seoTitle: "MB/s to Mbps Converter — Free & Instant (2026)",
     seoDescription:
-      "Convert MB/s (megabytes per second) to Mbps (megabits per second) instantly. Includes formula, examples and clear explanation of the units.",
+      "Convert megabytes per second to megabits per second (MB/s to Mbps) in one click. Includes formula, examples, and reverse converter. Free, no signup.",
   },
   {
     id: "file-transfer-time-calculator",
@@ -163,9 +164,9 @@ export const TOOLS: ToolMeta[] = [
       "file-size-converter",
     ],
     seoTitle:
-      "File Transfer Time Calculator — Internet, USB, LAN",
+      "File Transfer Time Calculator — USB, LAN, Wi-Fi (2026)",
     seoDescription:
-      "Calculate file transfer time across internet, Wi-Fi, USB, LAN or external drive. Free file transfer time estimator.",
+      "Free file transfer time calculator for any medium: USB, external drive, LAN, Wi-Fi. Enter size and speed, get instant results.",
     popular: true,
   },
 
@@ -193,9 +194,9 @@ export const TOOLS: ToolMeta[] = [
       "file-size-converter",
     ],
     seoTitle:
-      "Image Compressor — Compress JPG, PNG & WebP in Browser",
+      "Image Compressor — Compress JPG, PNG, WebP in Browser (2026)",
     seoDescription:
-      "Compress images online without uploading them. Supports JPG, PNG and WebP. Quality control, before/after preview and instant download.",
+      "Free image compressor that works entirely in your browser. Reduce JPG, PNG, WebP file size by up to 90% without losing quality. No upload, no signup.",
     featured: true,
     popular: true,
     clientSide: true,
@@ -222,9 +223,9 @@ export const TOOLS: ToolMeta[] = [
       "png-to-jpg",
       "aspect-ratio-calculator",
     ],
-    seoTitle: "Image Resizer — Resize JPG, PNG & WebP in Browser",
+    seoTitle: "Image Resizer — Resize Any Image in Seconds (2026)",
     seoDescription:
-      "Resize images online without uploading. Set width and height, lock aspect ratio and export to your preferred format. Free and fast.",
+      "Free online image resizer. Resize JPG, PNG, WebP to any dimension. Everything happens in your browser — your photos never leave your device.",
     popular: true,
     clientSide: true,
   },
@@ -244,9 +245,9 @@ export const TOOLS: ToolMeta[] = [
       "image-resizer",
       "file-size-converter",
     ],
-    seoTitle: "JPG to PNG Converter — Convert in Browser",
+    seoTitle: "JPG to PNG Converter — Convert Images in Browser (2026)",
     seoDescription:
-      "Convert JPG images to PNG online without uploading. Lossless conversion processed locally in your browser. Free and instant.",
+      "Free JPG to PNG and PNG to JPG converter. Convert image formats instantly in your browser. No upload, no signup, no quality loss.",
     popular: true,
     clientSide: true,
   },
@@ -266,9 +267,9 @@ export const TOOLS: ToolMeta[] = [
       "image-resizer",
       "file-size-converter",
     ],
-    seoTitle: "PNG to JPG Converter — Convert in Browser",
+    seoTitle: "PNG to JPG Converter — Free, Fast & Private (2026)",
     seoDescription:
-      "Convert PNG images to JPG online without uploading. Adjust quality to control the output file size. Free, fast and private.",
+      "Free PNG to JPG converter that works in your browser. Adjust quality to control file size. No upload, no signup, instant download.",
     popular: true,
     clientSide: true,
   },
@@ -295,10 +296,9 @@ export const TOOLS: ToolMeta[] = [
       "image-compressor",
       "bandwidth-calculator",
     ],
-    seoTitle:
-      "File Size Converter — Bytes, KB, MB, GB, TB + Binary Units",
+    seoTitle: "File Size Converter — Bytes, KB, MB, GB, TB (2026)",
     seoDescription:
-      "Convert between bytes, KB, MB, GB, TB and binary units (KiB, MiB, GiB, TiB). Clear, accurate file size conversion with explanations.",
+      "Free file size converter. Convert between bytes, kilobytes, megabytes, gigabytes, and terabytes. Includes binary units (KiB, MiB, GiB).",
     popular: true,
   },
   {
@@ -319,9 +319,9 @@ export const TOOLS: ToolMeta[] = [
     ],
     relatedTools: ["image-resizer", "file-size-converter"],
     seoTitle:
-      "Aspect Ratio Calculator — Width, Height & Ratios",
+      "Aspect Ratio Calculator — 16:9, 4:3, 1:1, and More (2026)",
     seoDescription:
-      "Calculate the aspect ratio of any width and height, or solve for a missing dimension. Includes common ratios like 16:9, 4:3, 1:1, 9:16, 3:2, 21:9.",
+      "Free aspect ratio calculator. Calculate width, height, and aspect ratios for any image, video, or screen. Includes common ratios and visual preview.",
     popular: true,
   },
 ];

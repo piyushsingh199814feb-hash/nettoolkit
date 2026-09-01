@@ -90,6 +90,37 @@ const FAQS = [
       </>
     ),
   },
+  {
+    question: "How long does it take to download a 4K movie?",
+    answer: (
+      <>
+        A 4K movie is typically 25–50 GB. At 100 Mbps it takes about 33–67
+        minutes; at 200 Mbps, 17–33 minutes; and on a 1 Gbps fiber link, just
+        3–7 minutes. Use the calculator above to estimate for your specific
+        file size and connection speed.
+      </>
+    ),
+  },
+  {
+    question: "How long to download 50 GB on 100 Mbps?",
+    answer: (
+      <>
+        About 67 minutes. The math: 50 GB × 8 = 400,000 Megabits. Divided by
+        100 Mbps = 4,000 seconds = ~67 minutes. Real-world times are usually
+        10–30% longer due to network overhead and protocol inefficiencies.
+      </>
+    ),
+  },
+  {
+    question: "How long to download 1 TB on gigabit internet?",
+    answer: (
+      <>
+        About 2 hours 13 minutes. 1 TB = 8,000,000 Megabits. At 1,000 Mbps =
+        8,000 seconds = 2 hours 13 minutes. On slower connections (100 Mbps)
+        the same 1 TB takes over 22 hours.
+      </>
+    ),
+  },
 ];
 
 export default function Page() {
