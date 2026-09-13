@@ -114,6 +114,12 @@ export default function BlogPostPage({ params }: PageProps) {
             {post.title}
           </h1>
           <p className="mt-3 text-lg text-ink-600">{post.description}</p>
+          <p className="mt-3 text-sm text-ink-500">
+            By{" "}
+            <Link href="/about" className="font-medium text-ink-700 hover:text-brand-700">
+              {post.author}
+            </Link>
+          </p>
         </header>
 
         <div className="prose-body mt-10 max-w-3xl">{post.content}</div>
@@ -202,7 +208,7 @@ function buildArticleJsonLd(post: BlogPost) {
     headline: post.title,
     description: post.seoDescription ?? post.description,
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: post.author,
     },
     publisher: {

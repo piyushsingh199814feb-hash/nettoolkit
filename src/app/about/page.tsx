@@ -74,12 +74,26 @@ export default function AboutPage() {
           tool suggestions pick up new entries automatically.
         </p>
 
+        <h2>Who's behind this</h2>
+        <p>
+          {SITE_NAME} is built and maintained by Piyush, an independent
+          developer who builds small, focused web tools. There's no company
+          or agency behind this — just one person who wanted a toolkit that
+          didn't hide simple calculators behind logins, upload limits or
+          intrusive ads, and decided to build it.
+        </p>
+        <p>
+          That also means updates happen in the open at a solo developer's
+          pace: new tools get added when they're genuinely useful, existing
+          ones get fixed when something's wrong, and feedback from real
+          users directly shapes what gets built next.
+        </p>
+
         <h2>Get in touch</h2>
         <p>
-          We are always looking for new tools to add. If there is a tool
-          you would find useful, or if you spot a bug, please reach out via
-          our <Link href="/contact">contact page</Link> (coming soon) or open
-          an issue on our public repository.
+          Always looking for new tools to add. If there is a tool you would
+          find useful, or if you spot a bug, please reach out via the{" "}
+          <Link href="/contact">contact page</Link>.
         </p>
       </article>
     </div>

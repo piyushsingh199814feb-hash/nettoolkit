@@ -60,4 +60,6 @@ export interface CategoryInfo {
   name: string;
   description: string;
   slug: string;
+  /** Longer editorial intro shown on the category page, one string per paragraph. */
+  intro?: string[];
 }

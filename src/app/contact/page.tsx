@@ -30,9 +30,9 @@ export default function ContactPage() {
             For general questions, feedback and ideas, email{" "}
             <a
               className="text-brand-700 underline-offset-2 hover:underline"
-              href="mailto:hello@nettoolkit.app"
+              href="mailto:piyush.forty@gmail.com"
             >
-              hello@nettoolkit.app
+              piyush.forty@gmail.com
             </a>
             .
           </p>
@@ -44,9 +44,9 @@ export default function ContactPage() {
             Found something broken or incorrect? Please email{" "}
             <a
               className="text-brand-700 underline-offset-2 hover:underline"
-              href="mailto:bugs@nettoolkit.app"
+              href="mailto:piyush.forty@gmail.com"
             >
-              bugs@nettoolkit.app
+              piyush.forty@gmail.com
             </a>{" "}
             with a short description and the URL of the tool you were using.
           </p>
@@ -60,17 +60,17 @@ export default function ContactPage() {
             We&apos;re always looking for new tools to add. Send your idea to{" "}
             <a
               className="text-brand-700 underline-offset-2 hover:underline"
-              href="mailto:hello@nettoolkit.app"
+              href="mailto:piyush.forty@gmail.com"
             >
-              hello@nettoolkit.app
+              piyush.forty@gmail.com
             </a>{" "}
             with a one-line description and a sample input/output.
           </p>
         </section>
 
         <Alert variant="info" title="Response times">
-          We&apos;re a small team. We try to respond within a few business
-          days, but please be patient if it takes a little longer.
+          This is a one-person project, so replies can take a few business
+          days — thanks for your patience.
         </Alert>
       </div>
     </div>

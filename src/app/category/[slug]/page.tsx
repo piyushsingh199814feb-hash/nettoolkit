@@ -50,6 +50,14 @@ export default function CategoryPage({ params }: PageProps) {
         </p>
       </header>
 
+      {cat.intro && cat.intro.length > 0 && (
+        <div className="prose-body mt-6 max-w-2xl">
+          {cat.intro.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </div>
+      )}
+
       {tools.length === 0 ? (
         <div className="mt-8 rounded-xl border border-dashed border-ink-300 p-10 text-center text-sm text-ink-500">
           No tools in this category yet.
